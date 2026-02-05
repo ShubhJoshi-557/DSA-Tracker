@@ -173,13 +173,84 @@ a:hover {
 /* Responsive utilities */
 @media (max-width: 768px) {
   .hide-mobile {
-    display: none;
+    display: none !important;
+  }
+  
+  /* Mobile header adjustments */
+  body {
+    font-size: 14px;
+  }
+  
+  /* Make stats grid 2 columns on mobile */
+  .stats-grid-mobile {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    padding: 12px 0 !important;
+  }
+  
+  /* Mobile filter improvements */
+  .filter-bar-mobile {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+  }
+  
+  .filter-bar-mobile::-webkit-scrollbar {
+    height: 4px;
+  }
+  
+  /* Mobile question cards */
+  .mobile-question-card {
+    padding: 12px;
+    border-bottom: 1px solid #2a2a35;
+  }
+  
+  .mobile-question-card:last-child {
+    border-bottom: none;
+  }
+  
+  /* Touch-friendly buttons */
+  button, select, input {
+    min-height: 44px;
+  }
+  
+  /* Better tap targets */
+  .tap-target {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 
 @media (min-width: 769px) {
   .show-mobile {
-    display: none;
+    display: none !important;
+  }
+  
+  /* Desktop stats grid 4 columns */
+  .stats-grid-desktop {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+/* Small mobile (< 480px) */
+@media (max-width: 480px) {
+  .mobile-stack {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+  
+  /* Smaller fonts on very small screens */
+  .mobile-text-sm {
+    font-size: 12px !important;
+  }
+  
+  .mobile-text-xs {
+    font-size: 10px !important;
   }
 }
 
