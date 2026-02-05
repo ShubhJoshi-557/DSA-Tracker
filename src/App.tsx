@@ -38,7 +38,7 @@ interface Question {
 }
 
 // Check if we're on mobile
-const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+// const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
 
 // Styles
 const styles: Record<string, CSSProperties> = {
